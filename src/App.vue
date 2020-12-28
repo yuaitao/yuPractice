@@ -39,6 +39,23 @@ export default {
     // }
   }
 }
+// created:html加载完成之前，执行。执行顺序:父组件-子组件
+// mounted:html加载完成后执行。执行顺序:子组件-父组件
+// methods:事件方法执行。
+// watch:去监听一个值的变化，然后执行相对应的函数。
+// computed:computed是计算属性，也就是依赖其它的属性计算所得出最后的值
+
+//https://www.cnblogs.com/libin-1/p/5902860.html
+//类型判断
+// typeof   局限性 和 准确性
+//数组 null undefined  正则 他都会返回object
+
+//constructor 和 instanceof   更适用于对象或者对象原型
+//instanceof 用于判断一个对象是否是某个类的实例
+//constructor 用于判断对象的原型，该属性返回对创建此对象的数组函数的引用。
+
+//  var _toString = Object.prototype.toString;
+//  _toString.call(obj) === '[object Object]'
 
 </script>
 <style>
