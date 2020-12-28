@@ -1,13 +1,46 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/>
+    <router-view /> -->
+    <div class="home">
+      <!-- template中使用环境变量 -->
+      <!-- API: {{ api }} -->
+    </div>
   </div>
 </template>
+<script>
+import axios from "axios";
 
+export default {
+  name: 'app',
+  data () {
+    return {
+      api: process.env.VUE_APP_API
+    };
+  },
+  created () {
+    this.init();
+
+    // this.init();
+  },
+  mounted () {
+  },
+  methods: {
+    init () {
+
+      //   console.log(this.$enasd.getListAPI('tiaos'))
+    }
+    // async init () {
+    //   let request = await this.$axios.fetchGet("/pet/findByStatus", "tiaos");
+    //   console.log(request)
+    // }
+  }
+}
+
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
