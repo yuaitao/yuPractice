@@ -5,14 +5,17 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view /> -->
-    <div class="home">
-      <!-- template中使用环境变量 -->
-      <!-- API: {{ api }} -->
-    </div>
+
+    <CaseClassType></CaseClassType>
+
+    <!-- template中使用环境变量 -->
+    <!-- API: {{ api }} -->
+
   </div>
 </template>
 <script>
 import axios from "axios";
+import CaseClassType from "../src/my-case/CaseClassType"
 
 export default {
   name: 'app',
@@ -21,8 +24,11 @@ export default {
       api: process.env.VUE_APP_API
     };
   },
+  components: {
+    CaseClassType: CaseClassType
+  },
   created () {
-    this.init();
+    // this.init();
 
     // this.init();
   },
@@ -45,17 +51,10 @@ export default {
 // watch:去监听一个值的变化，然后执行相对应的函数。
 // computed:computed是计算属性，也就是依赖其它的属性计算所得出最后的值
 
-//https://www.cnblogs.com/libin-1/p/5902860.html
-//类型判断
-// typeof   局限性 和 准确性
-//数组 null undefined  正则 他都会返回object
 
-//constructor 和 instanceof   更适用于对象或者对象原型
-//instanceof 用于判断一个对象是否是某个类的实例
-//constructor 用于判断对象的原型，该属性返回对创建此对象的数组函数的引用。
 
-//  var _toString = Object.prototype.toString;
-//  _toString.call(obj) === '[object Object]'
+
+
 
 </script>
 <style>
